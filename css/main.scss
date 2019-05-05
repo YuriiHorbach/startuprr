@@ -1,10 +1,7 @@
-//@import "/bourbon/bourbon"
-/*@import 'bourbon/bourbon';*/
 /*Specification*/
+@import "bourbon";
 @import "fonts.css";
 @import "sassFunc.scss";
-
-
 
 $main-color: #f39f18;
 $headers-color: #2c3949;
@@ -26,9 +23,6 @@ a, a:hover, a:focus, a:active{
   text-decoration: underline;
 }
 
-
-
-
 .headers{
   font-family: "PFCentroSlabProMedium", sans-serif;
 }
@@ -41,11 +35,34 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-  font-size: 48px;
+  font-size: em(48px);
   text-transform: none;
 }
+
+h2{
+  font-size: em(30px);
+}
+
+h3{
+  font-size: em(24px);
+}
+
 button {
   border-radius: 20px;
   color: #cccccc;
 }
 
+b, strong{
+  font-family: "RalewayBold", $font-stack-helvetica;
+}
+
+/*Header*/
+
+.head__main{
+  min-height: 620px;
+  background-size: cover;
+  background-position: center;
+  h1{
+    text-transform: none;
+  }
+}
