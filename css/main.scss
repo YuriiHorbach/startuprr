@@ -1,106 +1,69 @@
 /*Specification*/
-@import "bourbon";
-@import "fonts.css";
+
 @import "sassFunc.scss";
 
-$main-color: #f39f18;
-$headers-color: #2c3949;
-
+$mainColor: #4D4E53;
 
 body{
-  font-size: 15px;
-  min-width: 320px;
-  position: relative;
-  line-height: 1.66em;
-  font-family: "RalewayRegular", sans-serif;
-  overflow: hidden;
-  color: #333333;
+  font-family: 'Open Sans',Arial,sans-serif;
+    line-height: 1.5;
+ /*  display: grid;
+ 
+ grid-display-areas:
+ "nav article";
+ 
+ grid-template-rows: 1fr ;
+ grid-template-columns: 300px 1fr;
+ grid-gap: 10px;
+ height: 100vh;
+ margin: 0;
+  */
 }
 
+ display: grid;
+  grid-template-columns: 20vw auto;
 
-a, a:hover, a:focus, a:active{
-  color: $main-color;
-  text-decoration: underline;
-}
+.nav{
+  position: fixed;
+  color: $mainColor;
+  width:  20vw;
 
-.headers{
-  font-family: "PFCentroSlabProMedium", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6{
-  @extend .headers;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: $headers-color;
-}
-
-h1 {
-  font-size: em(48px);
-  text-transform: none;
-}
-
-h2{
-  font-size: em(30px);
-}
-
-h3{
-  font-size: em(24px);
-}
-
-button {
-  border-radius: 20px;
-  color: #cccccc;
-}
-
-b, strong{
-  font-family: "RalewayBold", $font-stack-helvetica;
-}
-
-/*Header*/
-
-.before{
-  content:"";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.head__main{
-  min-height: 620px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  &::before{
-    @extend  .before;
-    background: #394b5f;
-    opacity: .85;
+  /* margin: 20px 0 10px 15px; */
+ 
+  header{
+    justify-self: start;
+    font-size:  em(30px);
+    margin-left: 25px;
+    position: fixed;
+      
   }
 
-}
-
-.top-line{
-  padding-top: 45px;
-  min-height: 160px;
-  background: url(../img/top_gradient.png);
-}
-
-h1{
-  text-transform: none;
-}
-
-.head__logo{
-  img{
-    width: 100px;
-  }
-}
-
-.head__topMenu{
-  font-size: em(14px);
-  li{
-    line-height: 48px;
-    padding: 0 22px;
+  h3{
+    margin-bottom: 10px;  
+    font-size: em(25px); 
+    height: 15px;
+    font-weight:  regular;   
   }
 
+  .menu{
+
+    justify-self: start;
+    margin-top: 30px;
+    list-style-type: none;
+    line-height: em(30px);
+    
+
+     li{
+      border-bottom: 1px solid $mainColor;
+      margin-bottom:  50px;
+    }
+
+    a{
+      font-size: em(16px);
+      text-decoration: none;
+      color: $mainColor; 
+      letter-spacing: 1px;
+
+    } 
+  }
 }
